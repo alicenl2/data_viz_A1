@@ -2,4 +2,4 @@ seaborn
 pandas
 streamlit
 matplotlib
-streamlit-gsheets
+git+https://github.com/streamlit/gsheets-connection
