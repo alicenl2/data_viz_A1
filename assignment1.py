@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import random 
 import ssl
 import time 
-from streamlit_gsheets import GSheetsConnection
+from streamlit_gsheets import GSheetsConnection #i don't know why but i with github it was easier to use a requirements.txt for this with this git+https://github.com/streamlit/gsheets-connection
 
 
 ssl._create_default_https_context = ssl._create_unverified_context # I had an issue with certification for seaborn i do not know why but its the only way i found to solve it 
