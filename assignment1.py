@@ -43,10 +43,10 @@ if "start_time" not in st.session_state:
 if "response_time" not in st.session_state:
     st.session_state.response_time = None
 
-
+#creating the first button 
 random_button = st.button("Show Chart", type="primary")
 if random_button:
-    st.session_state.chart = random.choice(["bar", "box"])
+    st.session_state.chart = random.choice(["bar", "box"]) #the graph is randomly chosen
     st.session_state.start_time = time.time() 
 
 
@@ -57,10 +57,11 @@ if st.session_state.chart:
     if st.session_state.chart == "box":
         plot_seaborn_box(df)
         chart_name = "Box Plot"
-
+        
+    #second button that only appear after
     answer = st.button("I answered your question", type="primary")
     if answer:
         end_time = time.time()
-        st.session_state.response_time = round(end_time - st.session_state.start_time, 2)
-        st.write(f" :clock1: You took **{st.session_state.response_time}** seconds to answer the question. :clock1: ")
+        st.session_state.response_time = round(end_time - st.session_state.start_time, 2) #rounding so its easier to read 
+        st.write(f" :clock1: You took **{st.session_state.response_time}** seconds to answer the question. :clock1: ") 
 
